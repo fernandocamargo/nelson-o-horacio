@@ -1,12 +1,12 @@
-import times from "lodash/times";
-import { commerce, image, random } from "faker";
+import times from 'lodash/times';
+import { commerce, image, random } from 'faker';
 
 export const items = times(10).map(() => ({
-  image: [image.fashion(), "jpg"].join("."),
+  image: [image.fashion(null, null, true), 'jpg'].join('.'),
   description: commerce.productDescription(),
   id: random.uuid(),
   name: commerce.productName(),
-  price: commerce.price()
+  price: commerce.price(),
 }));
 
 export const getInitialState = () => ({ items });

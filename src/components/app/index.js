@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Fragment } from 'react';
 
-import { Products } from "components/widgets";
+import { Products } from 'components/widgets';
 
-export default () => (
-  <div>
-    <h1>Hello CodeSandbox</h1>
-    <h2>Start editing to see some magic happen!</h2>
+export const App = () => (
+  <Fragment>
     <Products />
-  </div>
+  </Fragment>
 );
+
+export default App;
